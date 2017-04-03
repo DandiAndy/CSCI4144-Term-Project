@@ -11,14 +11,18 @@ if __name__ == '__main__':
     filename = raw_input("Please input the data file name: ")
     df = None
     rf = None
+    row_count = 0
     try:
-        with open(filename, 'r+') as csvfile:
-            df = csv.reader(csvfile, delimiter=' ', quotechar='|')
+        df = open(filename, 'r+')
+        reader = csv.reader(df, delimiter=' ', quotechar='|')
+        row_count = len(list(reader)) - 1
+        df.seek(0)
         rf = open('Rules.txt', 'w+')
     except IOError:
         print("Error: File cannot be opened. Try again.")
         exit(0)
-
+        
+    print(row_count)
     #input mode that will be run and run it
     b = True
     while b:
@@ -26,29 +30,29 @@ if __name__ == '__main__':
         
         #get minimum support
         minsup = -1.0
-        while minsup > 1 && minsup < 0:
+        while minsup > 1 or minsup < 0:
             minsup =  input("Please input the minimum support(0.0 - 1.0): ")
         
         #get minimum confidence
-        minconf - -1.0
-        while minconf > 1 && minconf < 0:
+        minconf = -1.0
+        while minconf > 1 or minconf < 0:
             minconf = input("Please input the minimum confidence(0.0 - 1.0): ")
         
         if mode == 1:
             b = False
             print("Apriori selected.")
-            itemset1 = K1_Gen(minsup, minconf, df)
-            Apriori(minsup, minconf, df, itemset1)
+            itemset1 = K1_Gen(minsup, row_count, reader)
+            Apriori(minsup, minconf, row_count, df, reader, itemset1)
         elif mode == 2:
             b = False
             print("AprioriTid selected.")
-            itemset1 = K1_Gen(minsup, minconf, df)
-            AprioriTid(minsup, minconf, df, itemset1)
+            itemset1 = K1_Gen(minsup, row_count, reader)
+            AprioriTid(minsup, minconf, row_count, df, reader, itemset1)
         elif mode == 3:
             b = False
             print("AprioriHybrid selected.")
-            itemset1 = K1_Gen(minsup, minconf, df)
-            AprioriHybrid(minsup, minconf, df, itemset1)
+            itemset1 = K1_Gen(minsup, row_count, reader)
+            AprioriHybrid(minsup, minconf, row_count, df, reader, itemset1)
         else:
             print("Incorrect input. Please input a proper mode number.")
         

@@ -1,4 +1,4 @@
 from Apriori_Gen import Apriori_Gen
 
-def AprioriHybrid():
+def AprioriHybrid(minsup, minconf, row_count, df, k1):
     print("...begin aprioriHybrid...")
