@@ -2,6 +2,7 @@ from imports.Apriori import Apriori
 from imports.AprioriTid import AprioriTid
 from imports.AprioriHybrid import AprioriHybrid
 from imports.K1_Gen import K1_Gen
+from imports.Rule_Gen import Rule_Gen
 import csv
 
 if __name__ == '__main__':
@@ -42,17 +43,20 @@ if __name__ == '__main__':
             b = False
             print("Apriori selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
-            Apriori(minsup, minconf, row_count, df, reader, itemset1)
+            results = Apriori(minsup, row_count, df, reader, itemset1)
+            Rule_Gen(results, minconf)
         elif mode == 2:
             b = False
             print("AprioriTid selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
-            AprioriTid(minsup, minconf, row_count, df, reader, itemset1)
+            results = AprioriTid(minsup, row_count, df, reader, itemset1)
+            Rule_Gen(results, minconf)
         elif mode == 3:
             b = False
             print("AprioriHybrid selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
-            AprioriHybrid(minsup, minconf, row_count, df, reader, itemset1)
+            results = AprioriHybrid(minsup, row_count, df, reader, itemset1)
+            Rule_Gen(results, minconf)
         else:
             print("Incorrect input. Please input a proper mode number.")
         

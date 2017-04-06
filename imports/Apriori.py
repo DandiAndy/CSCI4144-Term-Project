@@ -1,8 +1,9 @@
 from __future__ import division
 from Apriori_Gen import Apriori_Gen
 
-def Apriori(minsup, minconf, row_count, df, reader, k1):
+def Apriori(minsup, row_count, df, reader, k1):
     print("...begin apriori...")
+    results = {}
     L = list(k1)
     while len(L) > 0:
         attributes = []
@@ -42,4 +43,6 @@ def Apriori(minsup, minconf, row_count, df, reader, k1):
                 if supMap.get(key)/row_count >= minsup:
                     l = key.split(" ")
                     print("Support: {} Key: {}".format(supMap.get(key)/row_count, l))
+                    results.update({key:supMap.get(key)})
                     L.append(l)
+    return results

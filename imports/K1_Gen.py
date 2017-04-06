@@ -1,12 +1,12 @@
 from __future__ import division
 
-def K1_Gen(minsup, row_count, df):
+def K1_Gen(minsup, row_count, reader):
     print("...generate k-1 itemset...")
-    print(row_count)
+    #print(row_count)
     supMap = {}
     attributes = []
     i = 0
-    for r in df:
+    for r in reader:
         row = r[0].split(";")
         if i == 0:
             attributes = row
@@ -34,6 +34,6 @@ def K1_Gen(minsup, row_count, df):
     L1 = []
     for t in items:
         L1.append([t])
-    print("L1: {}".format(L1))
+    #print("L1: {}".format(L1))
     return(L1)
     
