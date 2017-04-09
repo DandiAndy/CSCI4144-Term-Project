@@ -43,14 +43,14 @@ if __name__ == '__main__':
             b = False
             print("Apriori selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
-            results = Apriori(minsup, row_count, df, reader, itemset1)
+            L, results, complete = Apriori(minsup, row_count, df, reader, itemset1, False)
             for cand_set in results.keys():
                 Rule_Gen(results, results.get(cand_set), minconf)
         elif mode == 2:
             b = False
             print("AprioriTid selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
-            results = AprioriTid(minsup, row_count, df, reader, itemset1)
+            results = AprioriTid(minsup, row_count, df, reader, itemset1, False)
             for cand_set in results.keys():
                 Rule_Gen(results, results.get(cand_set), minconf)
         elif mode == 3:

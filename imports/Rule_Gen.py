@@ -10,5 +10,4 @@ def Rule_Gen(supMap, cand_set, minconf):
     n = len(cand_set)
 
     #find all itemsets in supMap that are n-1
-    listN = 
     

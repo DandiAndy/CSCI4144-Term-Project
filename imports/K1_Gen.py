@@ -10,7 +10,7 @@ def K1_Gen(minsup, row_count, reader):
         row = r[0].split(";")
         if i == 0:
             attributes = row
-            print(attributes)
+            #print(attributes)
             i += 1
         else:
             j = 0
