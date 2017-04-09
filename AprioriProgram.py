@@ -45,21 +45,21 @@ if __name__ == '__main__':
             itemset1 = K1_Gen(minsup, row_count, reader)
             results = Apriori(minsup, row_count, df, reader, itemset1)
             for cand_set in results.keys():
-                Rule_Gen(results, results.get(cand_set), minconf)
+                Rule_Gen(results, results.get(cand_set), len(results.get(cand_set), minconf)
         elif mode == 2:
             b = False
             print("AprioriTid selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
             results = AprioriTid(minsup, row_count, df, reader, itemset1)
             for cand_set in results.keys():
-                Rule_Gen(results, results.get(cand_set), minconf)
+                Rule_Gen(results, results.get(cand_set), len(results.get(cand_set), minconf)
         elif mode == 3:
             b = False
             print("AprioriHybrid selected.")
             itemset1 = K1_Gen(minsup, row_count, reader)
             results = AprioriHybrid(minsup, row_count, df, reader, itemset1)
             for cand_set in results.keys():
-                Rule_Gen(results, results.get(cand_set), minconf)
+                Rule_Gen(results, results.get(cand_set), len(results.get(can_set), minconf)
         else:
             print("Incorrect input. Please input a proper mode number.")
         
