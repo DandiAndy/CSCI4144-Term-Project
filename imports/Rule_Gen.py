@@ -34,5 +34,4 @@ def Rule_Gen(supMap, itemset1, n, minConf):
             right = list(itemset)
             left = list(itemset)
     
-
     
