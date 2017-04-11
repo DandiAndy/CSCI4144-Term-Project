@@ -2,12 +2,20 @@ from __future__ import division
 from Apriori_Gen import Apriori_Gen
 import psutil
 import sys
+import time
 
 def Apriori(minsup, row_count, df, reader, k1, hybridized):
     print("...begin apriori...")
-    results = {}
-    L = list(k1)
+    results = dict(k1)
+    Lns = list(k1.keys())
+    Lns.sort()
+    L = []
+    for t in Lns:
+        L.append([t])
+
+    #print L
     while len(L) > 0:
+        start = time.time()
         attributes = []
         Ck = Apriori_Gen(L)
         #print(Ck)
@@ -38,7 +46,8 @@ def Apriori(minsup, row_count, df, reader, k1, hybridized):
                         supMap.update({key:supMap.get(key)+1})
                     else:
                         supMap.update({key:1})
-                        
+        end = time.time()
+        print "Apriori pass(seconds): {}".format(end-start)
         #Remove based on support and recreate list from keys
         L = []
         for key in supMap.keys():
@@ -49,12 +58,15 @@ def Apriori(minsup, row_count, df, reader, k1, hybridized):
                 L.append(l)
         #find out if we are using the hybrid algorithm
         #if we are check the memory estimate for ~Ck. If it will fit in mem, switch
-        mem_est = (sum(supMap.values()) + row_count) * sys.getsizeof(max(supMap.keys(), key=len)) 
+        if len(supMap) > 0:
+            mem_est = (sum(supMap.values()) + row_count) * sys.getsizeof(max(supMap.keys(), key=len)) 
+        else:
+            mem_est = 0
         print "Estimate: {} Available: {}".format(mem_est, psutil.virtual_memory().available)
         #print supMap
         if hybridized and len(supMap) > 0 and mem_est < psutil.virtual_memory().available - 100000:
             #returns L and false if memory is sufficient
-            return L, results,  False
+            return supMap, results,  False
 
     #returns results and true if completed.
     return L, results, True

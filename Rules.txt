@@ -1,0 +1,171 @@
+Summary:
+Total rows in the original set: 395
+The selected measures: Support=0.6 Confidence=0.95
+-------------------------------------------------------------
+Rule: ( Support = 0.620253164557 , Confidence = 0.983935742972 )
+['address="U"', 'failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.620253164557 , Confidence = 0.983935742972 )
+['address="U"', 'failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.615189873418 , Confidence = 0.956692913386 )
+['address="U"', 'internet="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.691139240506 , Confidence = 0.978494623656 )
+['Pstatus="T"', 'failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.691139240506 , Confidence = 0.978494623656 )
+['Pstatus="T"', 'failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.792405063291 , Confidence = 0.951367781155 )
+['internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.792405063291 , Confidence = 0.951367781155 )
+['internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.625316455696 , Confidence = 0.961089494163 )
+['traveltime=1'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.627848101266 , Confidence = 0.976377952756 )
+['failures=0', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.627848101266 , Confidence = 0.976377952756 )
+['failures=0', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.607594936709 , Confidence = 0.975609756098 )
+['Pstatus="T"', 'failures=0', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.683544303797 , Confidence = 0.957446808511 )
+['nursery="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.683544303797 , Confidence = 0.957446808511 )
+['nursery="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.741772151899 , Confidence = 0.954397394137 )
+['address="U"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.840506329114 , Confidence = 0.951289398281 )
+['school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.60253164557 , Confidence = 0.959677419355 )
+['address="U"', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.60253164557 , Confidence = 0.959677419355 )
+['address="U"', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.675949367089 , Confidence = 0.967391304348 )
+['Dalc=1'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.643037974684 , Confidence = 0.965779467681 )
+['romantic="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.625316455696 , Confidence = 0.95 )
+['Pstatus="T"', 'famsize="GT3"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.625316455696 , Confidence = 0.95 )
+['Pstatus="T"', 'famsize="GT3"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.640506329114 , Confidence = 0.951127819549 )
+['Pstatus="T"', 'internet="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.630379746835 , Confidence = 0.950381679389 )
+['internet="yes"', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.630379746835 , Confidence = 0.950381679389 )
+['internet="yes"', 'nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.772151898734 , Confidence = 0.977564102564 )
+['failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.643037974684 , Confidence = 0.965779467681 )
+['romantic="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.716455696203 , Confidence = 0.952861952862 )
+['internet="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.716455696203 , Confidence = 0.952861952862 )
+['internet="yes"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.772151898734 , Confidence = 0.977564102564 )
+['failures=0'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.759493670886 , Confidence = 0.955414012739 )
+['nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.640506329114 , Confidence = 0.951127819549 )
+['address="U"', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.640506329114 , Confidence = 0.951127819549 )
+['address="U"', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.840506329114 , Confidence = 0.951289398281 )
+['school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.653164556962 , Confidence = 0.97358490566 )
+['failures=0', 'internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.653164556962 , Confidence = 0.97358490566 )
+['failures=0', 'internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.625316455696 , Confidence = 0.961089494163 )
+['traveltime=1'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.650632911392 , Confidence = 0.955390334572 )
+['address="U"', 'internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.650632911392 , Confidence = 0.955390334572 )
+['address="U"', 'internet="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.759493670886 , Confidence = 0.955414012739 )
+['nursery="yes"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.675949367089 , Confidence = 0.967391304348 )
+['Dalc=1'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.605063291139 , Confidence = 0.967611336032 )
+['Dalc=1', 'Pstatus="T"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.605063291139 , Confidence = 0.967611336032 )
+['Dalc=1', 'Pstatus="T"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.675949367089 , Confidence = 0.950177935943 )
+['famsize="GT3"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.653164556962 , Confidence = 0.952029520295 )
+['nursery="yes"', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.653164556962 , Confidence = 0.952029520295 )
+['nursery="yes"', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.675949367089 , Confidence = 0.950177935943 )
+['famsize="GT3"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.741772151899 , Confidence = 0.954397394137 )
+['address="U"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.670886075949 , Confidence = 0.974264705882 )
+['failures=0', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.670886075949 , Confidence = 0.974264705882 )
+['failures=0', 'schoolsup="no"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.691139240506 , Confidence = 0.954545454545 )
+['address="U"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.691139240506 , Confidence = 0.954545454545 )
+['address="U"', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.693670886076 , Confidence = 0.978571428571 )
+['failures=0', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.693670886076 , Confidence = 0.978571428571 )
+['failures=0', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.607594936709 , Confidence = 0.963855421687 )
+['Dalc=1', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.607594936709 , Confidence = 0.963855421687 )
+['Dalc=1', 'school="GP"'] ---> ['higher="yes"']
+
+Rule: ( Support = 0.617721518987 , Confidence = 0.979919678715 )
+['Pstatus="T"', 'failures=0', 'school="GP"'] ---> ['higher="yes"']

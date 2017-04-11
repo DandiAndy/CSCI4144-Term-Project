@@ -29,11 +29,11 @@ def K1_Gen(minsup, row_count, reader):
         if sup < minsup:
             supMap.pop(k, None)
 
-    items = list(supMap.keys())
-    items.sort()
-    L1 = []
-    for t in items:
-        L1.append([t])
+    #items = list(supMap.keys())
+    #items.sort()
+    #L1 = []
+    #for t in items:
+        #L1.append([t])
     #print("L1: {}".format(L1))
-    return(L1)
+    return supMap
     

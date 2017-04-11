@@ -1,6 +1,7 @@
 from __future__ import division
 from Apriori_Gen import Apriori_Gen
 import itertools
+import time
 
 def AprioriTid(minsup, row_count, df, reader, k1, hybridized):
     print("...begin aprioriTid...")
@@ -9,8 +10,19 @@ def AprioriTid(minsup, row_count, df, reader, k1, hybridized):
     Cm = {}
     attributes = []
     i = 0
-    L = list(k1)
-    #print L
+    L = []
+    #print len(list(k1.keys()[0].split(" ")))
+    if len(list(k1.keys()[0].split(" "))) < 2: 
+        Lns = list(k1.keys())
+        Lns.sort()
+        for t in Lns:
+            L.append([t])
+    else:
+        Lns = list(k1.keys())
+        for key in Lns:
+            key_spl = key.split(" ")
+            L.append(key_spl)
+    print L
     df.seek(0)
     if not hybridized:
         for r in reader:
@@ -58,8 +70,9 @@ def AprioriTid(minsup, row_count, df, reader, k1, hybridized):
     #print(Cm)
     #print(Cm)
     #start AprioriTid
-    results = {} 
+    results = dict(k1) 
     while len(L) > 0:
+        start = time.time()
         #check if hybridized and if db will fit into mem. 
         Ck = Apriori_Gen(L)
         #print(Ck)
@@ -87,7 +100,6 @@ def AprioriTid(minsup, row_count, df, reader, k1, hybridized):
                             temp_Cm.update({k:lv})
                         else:
                             temp_Cm.update({k:[c]})
-
         #print temp_Cm
         L = []
         Cm = dict(temp_Cm)
@@ -98,5 +110,6 @@ def AprioriTid(minsup, row_count, df, reader, k1, hybridized):
                     print("Support: {} Key: {}".format(supMap.get(key)/row_count, l))
                     results.update({key:supMap.get(key)})
                     L.append(l)
-        
+        end = time.time()
+        print "AprioriTid pass(seconds): {}".format(end-start) 
     return results 
